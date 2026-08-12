@@ -1,79 +1,76 @@
-# GRAIN-01 — Official Website & Landing Page
+# GRAIN-01 — Official Landing Page & Web Portal
 
-<div align="center">
+[![License: MIT](https://img.shields.io/badge/License-MIT-000000.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Grain Repository](https://img.shields.io/badge/Grain-Core_Repository-blue?style=flat-square&logo=github)](https://github.com/Punit-Dethe/Grain)
 
-![GRAIN-01 Banner](https://raw.githubusercontent.com/Punit-Dethe/Grain-Website/main/preview.png)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Grain Repository](https://img.shields.io/badge/Grain-App_Repository-blue?style=flat&logo=github)](https://github.com/Punit-Dethe/Grain)
-
-**[Visit Grain Website](https://punit-dethe.github.io/Grain-Website/)** | **[Main Grain Application](https://github.com/Punit-Dethe/Grain)**
-
-</div>
+[Live Website](https://punit-dethe.github.io/Grain-Website/) | [Main Application Repository](https://github.com/Punit-Dethe/Grain)
 
 ---
 
-## ⚡ Overview
+## Overview
 
-This repository contains the source code for the official landing page of **GRAIN-01**, an open-source, near real-time voice layer for Windows desktop.
+This repository houses the source code for the official landing page of **GRAIN-01**, an open-source, near real-time voice layer designed for desktop environments.
 
-The website is engineered as a zero-dependency, ultra-lightweight web experience designed with a cyberpunk industrial design system featuring interactive signal path visualizations, real-time latency simulation benchmarks, dynamic RAM footprint gauges, and Web Audio synth integration.
-
----
-
-## ✨ Features
-
-- **Industrial & Retro-Futuristic Aesthetic**: Built with custom typography (Syne, JetBrains Mono, Inter), high-contrast dark palette, hardware-inspired rack modules, and glowing status LEDs.
-- **Interactive Latency Benchmark**: Live comparative simulation demonstrating Grain's streaming transcription vs traditional record-first tools.
-- **Signal Path Visualizer**: Interactive module breakdown for Audio Capture, Transcription, and LLM Processing layers.
-- **Dynamic Memory Gauge**: Interactive RAM allocation preview showing idle (~100 MB) vs active peak states.
-- **Web Audio Synth Engine**: Sound feedback on key interactions using native Web Audio API oscillators.
-- **Particle Canvas Field**: Interactive background particle field responding to mouse cursor movement.
-- **Zero Build Dependencies**: Pure HTML5, Vanilla CSS3, and ES6 JavaScript. No framework overhead.
+The site is built as a zero-dependency, lightweight web application implementing an industrial hardware-inspired interface. It features interactive signal routing visualizers, real-time streaming latency benchmarks, dynamic memory utilization gauges, and native Web Audio synthesis.
 
 ---
 
-## 📂 Repository Structure
+## Technical Highlights
+
+- **Industrial UI & Layout Architecture**: Built using a dark high-contrast design system, typography optimized for code and technical data (Syne, JetBrains Mono, Inter), modular rack component panels, and status indicators.
+- **Streaming vs. Batch Latency Simulation**: An interactive benchmark comparing streaming audio processing against conventional record-and-transcribe workflows.
+- **Modular Signal Path Visualization**: Interactive breakdown of the capture, transcription, and post-processing pipeline layers.
+- **Resource Footprint Preview**: Interactive gauge rendering low-idle memory allocation profiles (~100 MB idle).
+- **Web Audio Signal Feedback**: Direct synthesizer feedback implemented using standard Web Audio API audio nodes.
+- **Interactive Particle Field**: Canvas-based reactive particle renderer.
+- **Framework-Independent**: Pure HTML5, CSS3, and ES6 JavaScript with zero external runtime or build dependencies.
+
+---
+
+## Repository Structure
 
 ```
-website/
-├── index.html     # Semantic page structure & landing page content
-├── style.css      # Design system, layout grid, variables & animations
-├── main.js        # Canvas canvas field, audio synth, interactive benchmarks
-└── README.md      # Project documentation
+Grain-Website/
+├── index.html     # Semantic page structure and core copy
+├── style.css      # Design system tokens, layout system, typography, and styling
+├── main.js        # Canvas background mechanics, benchmark engine, synth logic
+└── README.md      # Repository documentation
 ```
 
 ---
 
-## 🚀 Quick Start / Local Development
+## Local Development
 
-Since this project uses plain static files, no build step or node installation is required.
+Because the site relies exclusively on standard Web APIs and static assets, no build steps or dependencies are required.
 
-### Method 1: Direct File Opening
-Double-click `index.html` or open it directly in any modern web browser.
+### Direct Execution
+Open `index.html` directly in any web-standard compliant browser.
 
-### Method 2: Local HTTP Server (Recommended)
-Using Python:
+### Static HTTP Server
+
+Using Python 3:
 ```bash
 python -m http.server 8000
 ```
-Using Node / `npx`:
+
+Using Node.js:
 ```bash
 npx serve .
 ```
-Then navigate to `http://localhost:8000` in your web browser.
+
+Access the local instance at `http://localhost:8000`.
 
 ---
 
-## 📄 Related Projects
+## Related Repositories
 
-- **[Grain Application Repository](https://github.com/Punit-Dethe/Grain)**: The main Rust (Tauri 2.0) + React desktop application codebase.
+- **[Grain Desktop Application](https://github.com/Punit-Dethe/Grain)**: The primary Rust (Tauri) and React codebase for the GRAIN-01 application.
 
 ---
 
-## 📜 License
+## License
 
-This project is licensed under the [MIT License](LICENSE) — free for personal and commercial use.
+Distributed under the [MIT License](LICENSE).
