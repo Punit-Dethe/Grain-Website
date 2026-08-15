@@ -1,4 +1,4 @@
-# GRAIN-01 — Official Landing Page & Web Portal
+# GRAIN— Official Landing Page & Web Portal
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-000000.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
