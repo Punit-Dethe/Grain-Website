@@ -6,7 +6,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Grain Repository](https://img.shields.io/badge/Grain-Core_Repository-blue?style=flat-square&logo=github)](https://github.com/Punit-Dethe/Grain)
 
-[Live Website](https://punit-dethe.github.io/Grain-Website/) | [Main Application Repository](https://github.com/Punit-Dethe/Grain)
+[Experimental Vercel Website](https://usegrain.vercel.app/) | [Main Application Repository](https://github.com/Punit-Dethe/Grain)
 
 ---
 
@@ -64,6 +64,46 @@ npx serve .
 Access the local instance at `http://localhost:8000`.
 
 ---
+
+## Public MCP client document (provisional hosting)
+
+`oauth/client.json` is public OAuth application metadata for the native Grain
+client. It contains no credentials, tokens or account information. Its candidate
+identity is exactly `https://usegrain.vercel.app/oauth/client.json`; a Vercel
+commit/branch preview URL is not that identity. The local loopback callback stays
+inside Grain, and this website is not a token exchange server or MCP gateway.
+
+`vercel.json` sets JSON content type, a five-minute revalidation cache policy and
+`nosniff` on this path only. No landing-page code, routing rewrite, function,
+database or website build dependency is added. The endpoint must be public without
+Vercel login/challenges and must return direct HTTP 200, without redirects.
+
+From the co-located Grain checkout, validate the exact candidate and, after
+production deployment, the actual public endpoint:
+
+```powershell
+node scripts/check-mcp-client-metadata.mjs https://usegrain.vercel.app/oauth/client.json --file website/oauth/client.json
+node scripts/check-mcp-client-metadata.mjs https://usegrain.vercel.app/oauth/client.json --live
+```
+
+Publishing this file does not enable it in Grain: its host-owned client metadata
+URL remains disabled until separate endpoint verification and provider acceptance.
+The user approved the existing site as provisional hosting on 6 October 2026; it
+is not an official permanent domain decision.
+
+Move the same static file to another host without changing the document URL if
+possible. A stable Grain-owned domain would permit changing the hosting behind
+it. Replacing this `vercel.app` identity with a new domain changes `client_id`:
+update the document and Grain together, verify provider support, and expect that
+some providers may require new consent/registration. Keep the old document and
+old registrations available during transition rather than redirecting/removing
+the endpoint. Provider behavior and refresh continuity need actual acceptance;
+no transparent migration is promised.
+
+The signed extension registry belongs to a separate deployment with its own
+reviewed snapshots and release controls; landing-page deployments do not publish
+catalogues or hold registry signing keys. See Grain's
+`docs/Extensions 2.0/EXTENSION-HOSTING-DECISION.md` for the hosting/migration plan.
 
 ## Related Repositories
 
